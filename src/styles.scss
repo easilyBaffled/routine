@@ -1,0 +1,71 @@
+main {
+  display: flex;
+  gap: 12px; 
+}
+
+.task-list {
+  // https://webkul.github.io/coolhue/
+  background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+  padding: 8px;
+    max-width: 60vw;
+    height: 90vh;
+    overflow: scroll;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task {
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  color: #ddd;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s ease-in-out;
+  gap: 8px;  
+  min-height: 20px;
+  // https://dev.to/omeal/glassmorphism-upcoming-ui-trend-44fk?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email
+  color: #ecf0f1;
+      border-radius: 8px;
+      background: rgba( 255, 255, 255, 0.2 );
+      border: solid 1px rgba(255,255,255,0.3);
+      backgroud-clip: padding-box;
+      backdrop-filter: blur(10px );
+  &:hover {
+    scale: 1.03;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  & > *{
+    display: flex;
+    align-items: center;
+    gap: 10px;  
+  }
+}
+
+#task-input {
+  display: inline-flex;
+  width: 100%;
+  min-height: 10vh;
+}
+
+#meta-sidebar {
+  max-width: 30vw;
+}
+
+.controls {
+
+}
+
+.task {  
+  display: grid;
+  // grid-template-columns: min-content max-content max-content min-content;
+  grid-template-columns: min-content fit-content(100%) max-content min-content;
+  .MuiCheckbox-root {
+    .MuiSvgIcon-root {
+      height: 1.5em;
+      width: 1.5em;
+    }    
+  }
+}
